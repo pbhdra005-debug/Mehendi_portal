@@ -1,0 +1,221 @@
+/* 🔥 RESET */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+}
+
+/* 🔥 SMOOTH SCROLL */
+html{
+scroll-behavior:smooth;
+}
+
+/* 🔴 NAVBAR */
+nav{
+background:#7a2d0c;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffd700;
+}
+
+/* 🟢 SECTION */
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+/* 🏠 SLIDER */
+.slider{
+width:100%;
+height:90vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+width:100%;
+height:90vh;
+position:absolute;
+object-fit:cover;
+opacity:0;
+animation:slideShow 12s infinite;
+}
+
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:4s;}
+.slide:nth-child(3){animation-delay:8s;}
+
+@keyframes slideShow{
+0%{opacity:0;}
+10%{opacity:1;}
+30%{opacity:1;}
+40%{opacity:0;}
+100%{opacity:0;}
+}
+
+/* TEXT OVER IMAGE */
+.overlay{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+background:rgba(0,0,0,0.4);
+padding:20px;
+border-radius:10px;
+}
+
+/* 👩 ABOUT */
+.about-box{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.about-box img{
+width:250px;
+border-radius:15px;
+}
+
+.about-box div{
+max-width:400px;
+text-align:left;
+}
+
+/* 💼 SERVICES */
+.services{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+width:220px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* 🖼️ GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+/* ⭐ REVIEWS */
+.reviews{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.review-card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.review-card:hover{
+transform:scale(1.05);
+}
+
+/* 📞 CONTACT */
+.contact-box{
+background:#f5f5f5;
+padding:30px;
+border-radius:10px;
+width:300px;
+margin:auto;
+}
+
+.contact-box button{
+background:#7a2d0c;
+color:white;
+border:none;
+padding:10px 20px;
+margin-top:10px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.contact-box button:hover{
+background:#a9441a;
+}
+
+/* 🔥 SCROLL ANIMATION */
+.fade-up{
+opacity:0;
+transform:translateY(50px);
+transition:0.8s;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* 🟤 FOOTER */
+footer{
+background:linear-gradient(to right,#7a2d0c,#2c2c2c);
+color:white;
+padding:30px;
+text-align:center;
+margin-top:30px;
+}
+
+/* 📱 RESPONSIVE */
+@media(max-width:768px){
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+.about-box{
+flex-direction:column;
+text-align:center;
+}
+
+.about-box div{
+text-align:center;
+}
+
+}
